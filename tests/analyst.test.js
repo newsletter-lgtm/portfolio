@@ -182,11 +182,62 @@ test("the Analyst takes certifications and events from LinkedIn's sections, with
   }
 });
 
-test("the Analyst explains how to add a photo: into the repo folder, then the photo tool, with alt text", async () => {
+// The guide's photo step: + → Media in the chat box. Copying the photo into
+// the repo folder is the way when the agent cannot open the attachment.
+test("the Analyst takes a photo attached with + → Media, runs the photo tool, and puts the photo on the page", async () => {
   const skill = await analystSkill();
-  for (const needed of ["Copy the photo into your repo folder", "node tools/photo.mjs", '"src": "assets/photo.webp"', '"alt"', "not one made by AI", "delete the original photo"]) {
+  const offer = skill.match(/^"Would you like a photo of yourself on your site\? (.*)"$/m)?.[1] ?? "";
+  assert.match(offer, /Click the \*\*\+\*\* in the chat box, then \*\*Media\*\*, pick your photo/);
+  assert.match(offer, /not one made by AI/);
+  for (const needed of [
+    "When the person attaches a photo, copy the attached file into the repo folder",
+    "Never into `site/`",
+    "Copy the photo into your repo folder",
+    "node tools/photo.mjs",
+    '"src": "assets/photo.webp"',
+    '"alt"',
+    "delete the original photo",
+    "If you copied it into the repo folder, delete it yourself",
+    '"Your photo is on your site: open the preview, or reload it, to see it."',
+  ]) {
     assert.ok(skill.includes(needed), needed);
   }
+});
+
+// After a LinkedIn text or a CV, the person sees what goes on the page and
+// can change or take out parts before anything is written.
+test("the Analyst shows what it found in the text and waits for the person's answer, outside the 8 questions", async () => {
+  const skill = await analystSkill();
+  const sort = skill.split(/^## /m).find((section) => section.startsWith("2"));
+  assert.match(sort, /Show what you found before you ask anything else/);
+  assert.match(sort, /^"Is this right\? Tell me what to change or leave out, or say \*\*yes\*\*\."$/m);
+  assert.match(sort, /nothing they took out goes into the content file/);
+  assert.match(sort, /This message is not one of the 8 questions/);
+  assert.match(skill, /Two messages are not among the 8: the one in step 2 that shows what you found in their text, and the email follow-up in step 3\./);
+  // It comes before the questions about the gaps, and the file is written after them.
+  assert.ok(skill.indexOf("Show what you found") < skill.indexOf("## 3. Ask about the gaps"));
+  assert.ok(skill.indexOf("## 3. Ask about the gaps") < skill.indexOf("## 4. Write the content file"));
+});
+
+// Without an email address the legal notice has a blank (node tools/legal.mjs
+// says so at the end of the Developer step), so the Analyst asks once more.
+test("the Analyst asks once more for the email address when it has none, even after 8 questions", async () => {
+  const skill = await analystSkill();
+  assert.match(skill, /Never ask a follow-up, apart from the one for the email address in step 3\./);
+  const interview = skill.split(/^## /m).find((section) => section.startsWith("3"));
+  assert.match(interview, /\*\*The email address is the one follow-up\.\*\*/);
+  assert.match(interview, /"Which email address may visitors see\? The legal notice on your site needs one\."/);
+  assert.match(interview, /Ask it even after your 8th question/);
+  assert.match(interview, /ask nothing more but the email follow-up/);
+  // Still at most 8 numbered questions.
+  assert.ok((interview.match(/^\d+\. \*\*/gm) ?? []).length <= 8);
+});
+
+// A beginner may have no repository yet: the question says how to skip it.
+test("the projects question says to skip it without projects on GitHub", async () => {
+  const interview = (await analystSkill()).split(/^## /m).find((section) => section.startsWith("3"));
+  const projects = interview.match(/^\d+\. \*\*Projects\*\*: (.*)$/m)?.[1] ?? "";
+  assert.match(projects, /No projects on GitHub yet\? Say \*\*skip\*\*\."$/);
 });
 
 // Proxy runs: a fresh agent on Claude Haiku 4.5 played the Analyst on fake
