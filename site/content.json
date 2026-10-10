@@ -1,79 +1,293 @@
 {
   "$schema": "./content.schema.json",
   "language": "en",
-  "name": "Ada Example",
-  "headline": "Frontend developer who likes fast, accessible web pages",
+  "name": "Fabian Krumbholz",
+  "headline": "Principal Web Performance Consultant | Google Developer Expert",
   "photo": {
-    "src": "assets/avatar.svg",
-    "alt": "Ada Example's avatar: a simple drawing of a head and shoulders in two shades of grey"
+    "src": "assets/photo.webp",
+    "alt": "Fabian Krumbholz smiling against a purple and blue gradient background"
   },
-  "pitch": "I build small, fast websites that everyone can use, and I explain every choice in plain words.",
-  "highlights": [
-    { "text": "Every page I look after scores 100 for accessibility in Lighthouse" },
-    { "text": "Five years of teaching maths: I make technical choices easy to follow" },
-    { "text": "Two open-source projects on GitHub", "url": "https://github.com/octocat" }
-  ],
+  "pitch": "I help automotive brands, banks, insurers, and e-commerce shops turn page speed into revenue.",
   "availability": {
-    "text": "Open to junior frontend roles from January 2027.",
+    "text": "Available for speaking invitations and conference talks.",
     "actionLabel": "Write to me",
-    "actionUrl": "mailto:ada@example.com"
+    "actionUrl": "mailto:info@krumbholz.de"
   },
-  "location": { "city": "Milan", "country": "Italy", "timeZone": "Europe/Rome" },
+  "location": {
+    "city": "Munich",
+    "country": "Germany",
+    "timeZone": "Europe/Berlin"
+  },
   "languages": [
-    { "name": "English", "level": "native" },
-    { "name": "Italian", "level": "B2" }
-  ],
-  "bio": [
-    "I build small, fast websites and the tools around them. Before I wrote code, I taught maths, so I still enjoy explaining things simply.",
-    "This is a sample portfolio of a fictional person. Replace it with your own story."
-  ],
-  "projects": [
     {
-      "title": "Tide Tables",
-      "description": "A tiny web app that shows today's tides for a chosen harbour, built with plain HTML, CSS and JavaScript.",
-      "github": "https://github.com/octocat/Hello-World"
+      "name": "German",
+      "level": "native"
     },
     {
-      "title": "Reading Log",
-      "description": "A static site that lists the books I read, generated from one JSON file.",
-      "github": "https://github.com/octocat/Spoon-Knife",
-      "url": "https://octocat.github.io/Spoon-Knife/"
+      "name": "English",
+      "level": "C2"
     }
   ],
+  "bio": [
+    "Fifteen years as a web developer and ten as a web performance consultant let me talk about accessible, fast websites with both developers and decision-makers: what it takes to build them, and what they are worth.",
+    "I’ve optimized web technologies from the moment they shipped, always obsessing over one thing: how fast a page feels to the person actually using it. And no era comes close to how exciting this one is.",
+    "The problem I am working on now: getting the same quality out of AI tools that a senior developer builds by hand — accessible, fast, and running in every browser. Hundreds of hours in, I am a little further along than most, and still experimenting and getting better at it every day. YouTube shows you the demos; I show you the honest version, what worked and what did not.",
+    "I build that way for a living, too. At Speed Kit I create AI agents that automate web performance testing, and the data tools that tie what they measure to business outcomes — production systems, not weekend prototypes, and the reason I can put a number on speed as readily as I can explain it.",
+    "I’m a Google Developer Expert for Web, and I speak regularly at DevFests and other GDG events across Europe and North Africa. Generous people taught me this craft, and passing it on is a pleasure. You’ll find me talking with attendees before the talk, after it — and usually until someone locks the venue."
+  ],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/octocat" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ada-example" },
-    { "label": "Email", "url": "mailto:ada@example.com" }
+    {
+      "label": "Sessionize",
+      "url": "https://sessionize.com/fabkru/"
+    },
+    {
+      "label": "Google Developer Expert",
+      "url": "https://me.developers.google.com/u/105327377362720384326"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/fabian-krumbholz/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/fabkrum"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/fabkru"
+    },
+    {
+      "label": "Speed Kit",
+      "url": "https://www.speedkit.com/"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:info@krumbholz.de"
+    }
   ],
   "cv": {
     "experience": [
       {
-        "role": "Junior Frontend Developer",
-        "organization": "Example Studio",
-        "start": "2024",
+        "role": "Principal Web Performance Consultant",
+        "organization": "Speed Kit",
+        "start": "2014",
         "end": "present",
-        "summary": "Build and maintain marketing sites; brought every page to a Lighthouse accessibility score of 100."
+        "summary": "Lead a team of web performance experts and data analysts, building AI agents and data tools to turn page speed into revenue."
       },
       {
-        "role": "Maths Teacher",
-        "organization": "Example Secondary School",
-        "start": "2019",
-        "end": "2024",
-        "summary": "Taught maths to students aged 11 to 16 and ran the after-school coding club."
+        "role": "Lecturer",
+        "organization": "FH Salzburg",
+        "start": "2020",
+        "end": "present",
+        "summary": "Lecture on web performance and modern web development."
       }
     ],
     "education": [
       {
-        "title": "Web Development Bootcamp",
-        "organization": "Example Academy",
-        "year": "2023"
-      },
-      {
-        "title": "BSc Mathematics",
-        "organization": "Example University",
-        "year": "2018"
+        "title": "Studies",
+        "organization": "Fachhochschule München"
       }
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "Accessibility", "Git"]
-  }
+    "skills": [
+      "Web Performance Consulting",
+      "AI Agents",
+      "Core Web Vitals",
+      "E-commerce Optimization",
+      "Public Speaking"
+    ]
+  },
+  "builtAt": {
+    "event": "DevFest Milano 2026",
+    "date": "2026-10-10"
+  },
+  "events": [
+    {
+      "name": "DevFest Milano 2026",
+      "date": "2026-10-10",
+      "city": "Milan",
+      "role": "attendee",
+      "sessions": [
+        {
+          "type": "workshop",
+          "title": "AI-Native Web Development, Hands-On"
+        }
+      ]
+    },
+    {
+      "name": "DMEXCO 2026",
+      "date": "2026-09-24",
+      "city": "Cologne",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "How much revenue is your load time costing you?"
+        }
+      ]
+    },
+    {
+      "name": "Shopware Open Stage",
+      "date": "2026-08-27",
+      "online": true,
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Onsite Web Performance Optimization"
+        }
+      ]
+    },
+    {
+      "name": "E-Commerce BBQ 2026",
+      "date": "2026-06-11",
+      "city": "Karlsruhe",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "KI im Realitätscheck"
+        }
+      ]
+    },
+    {
+      "name": "Build with AI 2026, GDG Pristina",
+      "date": "2026-04-30",
+      "city": "Pristina",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "workshop",
+          "title": "Build-with-AI workshop"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Heraklion",
+      "date": "2026-01-24",
+      "city": "Heraklion",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "panel",
+          "title": "Roundtable (Ask me anything!)"
+        },
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Cairo 2025",
+      "date": "2025-12-13",
+      "city": "Cairo",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        },
+        {
+          "type": "talk",
+          "title": "The Shift from Web Performance Optimization to Prediction"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Ponferrada 2025",
+      "date": "2025-11-28",
+      "city": "Ponferrada",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "DevFest 2025 by GDG Faro",
+      "date": "2025-11-22",
+      "city": "Faro",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Hamburg 2025",
+      "date": "2025-11-15",
+      "city": "Hamburg",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Sousse 2025",
+      "date": "2025-11-09",
+      "city": "Sousse",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Zagreb 2025",
+      "date": "2025-10-24",
+      "city": "Zagreb",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "GDG DevFest 2025 Samsun",
+      "date": "2025-10-18",
+      "city": "Samsun",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Kickstart Your Career"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Kosova 2024",
+      "date": "2024-12-07",
+      "city": "Pristina",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "workshop",
+          "title": "Core Web Vitals Optimization"
+        }
+      ]
+    },
+    {
+      "name": "DevFest Sousse 2024",
+      "date": "2024-11-03",
+      "city": "Sousse",
+      "role": "speaker",
+      "sessions": [
+        {
+          "type": "talk",
+          "title": "Mission Zero"
+        }
+      ]
+    }
+  ]
 }

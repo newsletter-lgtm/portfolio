@@ -1,63 +1,63 @@
 # Design brief
 
-Source: the default brief that ships with the template (no Stitch design).
-Mood: calm, warm, precise. A quiet page like a well-set book: the person's words and work come first, not the decoration.
+Source: screenshot of a Stitch design
+Mood: passion, experience, friendly. A StageTech dark developer aesthetic: monospace metadata and terminal precision set against a high-contrast dark palette, balanced by clean typography and generous whitespace.
 
 ## Style
 
-- Style: Classic.
-- Feel: calm, warm, precise.
-- Personal detail: none. The default design has no personal detail; the Designer's interview gives you yours.
-- Motion: almost none. When the visitor prefers reduced motion, nothing moves.
+- Style: Technical, with a Modern touch: lots of whitespace and borderless lists.
+- Feel: passion, experience, friendly.
+- Personal detail: a subtle chef knife divider detail inspired by cooking.
+- Motion: crisp and functional: state changes, subtle glowing hover accents. When the visitor prefers reduced motion, nothing moves.
 
 ## Colours
 
 | Token | Light | Dark | Used for |
 |---|---|---|---|
-| background | #f7f3ec | #1b1714 | page background: warm paper |
-| surface | #eee7dc | #26201c | the photo's backdrop, the rare box |
-| text | #231e1a | #eee6dc | headings and body text |
-| muted | #675c52 | #b3a698 | headline under the name, dates, captions, hairlines |
-| accent | #a8402f | #f0937d | links, focus ring: ink red |
-| on-accent | #ffffff | #1b1714 | text on an accent-coloured button |
+| background | #f6f7f9 | #081425 | page background: cool white in light mode, deep obsidian blue in dark mode |
+| surface | #eef2f6 | #111c26 | cards, badges, terminal headers |
+| text | #161b22 | #e6edf3 | headings and body text |
+| muted | #57606a | #8ba2b9 | headline under the name, dates, metadata labels, borders |
+| accent | #0969da | #00d8ff | links, focus ring, interactive highlights: syntax blue / electric cyan |
+| on-accent | #ffffff | #081425 | text on an accent-coloured button or badge |
 
 ## Type
 
 | Role | Font | Size | Weight |
 |---|---|---|---|
-| headings | "Newsreader", Georgia, "Times New Roman", serif | name 2.75rem, section 1.5rem, project 1.25rem | 500 |
-| body | "Literata", Georgia, "Times New Roman", serif | 1.0625rem, line height 1.65 | 400 |
-| details | "Literata", Georgia, "Times New Roman", serif | dates 0.9375rem | 400 |
+| headings | "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace | name 2rem, section 1.125rem, item 1rem | 600 |
+| body | "IBM Plex Sans", system-ui, sans-serif | 1rem, line height 1.6 | 400 |
+| details | "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace | dates, status badge, metadata labels 0.875rem | 400 |
 
 ## Shapes
 
-- Corner radius: none; only the photo is round.
-- Borders: hairlines, 1px in the muted colour thinned out, between the sections and between the projects.
-- Shadows: none.
+- Corner radius: square corners (0) or subtle 2px rounding on badges and terminal containers; small square photo frame.
+- Borders: 1px subtle border in the muted/surface colour, with glowing accent highlights on active elements.
+- Shadows: subtle dark glow on accent borders, no heavy drop shadows.
 
 ## Layout
 
-- One narrow column, at most 38rem wide, centred, text flush left, with 1.25rem space at the sides on phones.
-- 4rem between sections, with a hairline between them; 1.5rem between items in a list.
-- Projects: a list, one below the other, separated by hairlines; no cards and no columns.
+- One column, at most 48rem wide, centred, with 1.25rem padding at the sides on phones; faint dot grid backdrop.
+- 3.5rem between sections, 1.25rem between items in a list.
+- Talks and experience: structured chronological list with dates aligned, metadata tags, and action links.
 
 ## Components
 
-- Links: accent colour, underlined a little below the text; the underline disappears on hover, and keyboard focus shows a 2px accent ring.
-- Projects: title as a project heading, one sentence, then the links to the code and the live site as text links.
-- Skills: one plain line, separated by commas.
-- Section headings: plain text in the heading font; the hairline above the section is the only line.
-- The headline under the name: in the heading font's italic, in the muted colour.
+- Links: accent colour, underlined or styled as terminal-style bracketed links ([view], [slides]); keyboard focus shows a 2px accent ring.
+- Talks & events: clean chronological rows with date, city, session title, and talk type badge.
+- Skills: monospace tag cloud / array style with subtle borders and high-contrast hover states.
+- Section headings: monospace font with numbered index or terminal comment style (e.g. "// 01. SPEAKING & TALKS").
+- Availability badge: glowing status pill ("status: available for speaking") next to the role.
 
 ## Signature
 
-- Move: Typographic polish
-- Guide: guides/visual-design/improve-text-layout-and-legibility.md
-- Where: every heading and paragraph: headings in even lines, no lonely last word in a paragraph, old-style numbers in the text.
+- Move: Other cards step back on hover and focus
+- Guide: guides/css/child-state-based-styling.md
+- Where: the talks and events list: while one item is hovered or focused, the others step back slightly to focus the reader's attention.
 
 ## Sections
 
-1. `bio`: the name, the headline and the bio.
-2. `projects`: the sample person looks for a job, so the projects lead.
-3. `links`: GitHub, LinkedIn and email.
-4. `cv`: experience, education and skills.
+1. `bio`: name, headline, pitch, availability status badge, and bio.
+2. `events`: speaking is the primary goal, so talks and workshops lead.
+3. `cv`: experience, lecturer roles, education, and skills.
+4. `links`: Sessionize, GDE, GitHub, LinkedIn, Speed Kit, and email contact channel.
